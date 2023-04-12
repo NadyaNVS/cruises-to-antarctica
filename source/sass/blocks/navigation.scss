@@ -67,8 +67,62 @@
   }
 }
 
+.navigation__header-list a {
+  @include vp-767 {
+    width: 100%;
+    color: $color-tangaroa;
+    padding: 10px 10px 8px 10px;
+  }
+}
+
+.navigation__header-list li {
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
 .is-open .navigation__header-list {
   @include vp-767 {
     display: block;
+    top: -20px;
+    left: 36px;
+    padding-top: 75px;
+    padding-left: 15px;
+    position: absolute;
+    background-color: $color-alice-blue;
+    z-index: 2;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.is-open .navigation__toggle {
+  &::before,
+  &::after {
+    z-index: 3;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: $color-tangaroa;
+  }
+
+  &::before {
+    background-image: none;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+}
+
+.is-open .navigation__logo--mobile {
+  @include vp-767 {
+    z-index: 3;
+    fill: $color-tangaroa;
+    margin-left: 60px;
   }
 }
