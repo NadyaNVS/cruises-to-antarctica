@@ -3,11 +3,17 @@
   padding: 10px 20px;
 
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
   border: none;
   cursor: pointer;
-
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   transition: opacity $trans-default;
 
   &--red {
