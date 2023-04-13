@@ -58,7 +58,17 @@
 
 .navigation__list a {
   display: block;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid transparent;
   color: $color-alice-blue;
+
+  @include hover-focus {
+    opacity: 0.8;
+    color: $color-lochmara;
+    outline: none;
+  }
 }
 
 .navigation__header-list {
@@ -73,6 +83,12 @@
     width: 100%;
     color: $color-tangaroa;
     padding: 10px 10px 8px 10px;
+  }
+
+  @include hover-focus {
+    opacity: 1;
+    color: $color-tangaroa;
+    border-bottom: 1px solid $color-alice-blue;
   }
 }
 
