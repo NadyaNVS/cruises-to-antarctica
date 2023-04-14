@@ -1,8 +1,6 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
-
-  color: $color-default-white;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -15,6 +13,7 @@
   justify-content: center;
   box-sizing: border-box;
   transition: opacity $trans-default;
+  user-select: none;
 
   &--red {
     background-color: $color-torch-red;
@@ -28,5 +27,6 @@
 
   @include hover-focus {
     opacity: 0.8;
+    outline: 1px solid $color-lochmara;
   }
 }
