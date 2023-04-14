@@ -301,6 +301,54 @@
           </ul>
         </div>
       </section>
+
+      <section class="booking" id="booking">
+        <div class="booking__container container">
+          <div class="booking__text-wrapper">
+            <h2>Раннее бронирование</h2>
+            <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          </div>
+
+          <div class="booking__form" data-form-validate data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+              <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+              <fieldset>
+
+                <div class="custom-input" data-validate-type="text" data-limitation="name" data-required
+                  data-message-base="Данное поле является обязательным">
+                  <label class=" visually-hidden" for="name">Ваше имя:</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" minlength="1"
+                    pattern="^[a-zA-Zа-яёА-ЯЁ\-\s]+$/g" required>
+                </div>
+
+                <div class="custom-input" data-validate-type="phone" data-required
+                  data-message-base="Данное поле является обязательным">
+                  <label class="visually-hidden" for="tel">Телефон:</label>
+                  <input type="tel" name="phone" id="tel" placeholder="Телефон" required>
+                </div>
+
+                <div class="custom-input" data-validate-type="email" data-required
+                  data-message-base="Данное поле является обязательным">
+                  <label class="visually-hidden" for="email">Email:</label>
+                  <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="booking__checkbox-wrapper custom-toggle custom-toggle--checkbox"
+                  data-validate-type="checkbox" data-required data-message-base="Данное поле является обязательным">
+                  <label class="booking__checkbox" for="agreement">
+                    <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
+                    <span class="booking__control-mark"></span>
+                    <span class="booking__control-name">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                  </label>
+                </div>
+                <button class="booking__button btn" type="submit">Оставить заявку</button>
+
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container container">

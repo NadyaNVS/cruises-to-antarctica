@@ -1,0 +1,217 @@
+.booking {
+  background-image: url("../img/booking-background.jpg");
+  background-color: $color-solitude;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  @media (min-width: $vp-1024) {
+    @include retina {
+      background-image: url("../img/booking-background@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/booking-background-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/booking-background-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/booking-background-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/booking-background-mobile@2x.jpg");
+    }
+  }
+}
+
+.booking__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+
+  @include vp-1023 {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+.booking__text-wrapper {
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+
+.booking h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    text-align: center;
+    font-size: 34px;
+    line-height: 51px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.booking p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 353px;
+
+  @include vp-1023 {
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.booking fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__form {
+  color: $color-alice-blue;
+  background-color: $color-tangaroa;
+  padding: 50px;
+  max-width: 403px;
+  box-shadow: 0px 4px 45px $color-form-shadow;
+
+  @include vp-767 {
+    padding: 40px 30px;
+  }
+}
+
+.booking__form h3 {
+  margin: 0;
+  padding: 0;
+  color: $color-alice-blue;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 35px;
+}
+
+
+.booking input {
+  width: 100%;
+  color: $color-tangaroa;
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 11px 16px;
+  box-sizing: border-box;
+  background-color: $color-alice-blue;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    border-color: $color-lochmara;
+  }
+
+  &:active {
+    border: 1px solid $color-lochmara;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-lochmara;
+  }
+}
+
+.booking__checkbox-wrapper {
+  // width: 100%;
+  margin-bottom: 30px;
+}
+
+.booking__checkbox {
+  display: flex;
+  cursor: pointer;
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 20px auto;
+    column-gap: 8px;
+  }
+}
+
+.booking__control-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  background-color: $color-alice-blue;
+  margin-right: 5px;
+  border: 1px solid transparent;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.booking__control-name {
+  font-size: 10px;
+  line-height: 13px;
+  align-self: center;
+
+  @include vp-767 {
+    line-height: 12px;
+  }
+}
+
+.booking__button {
+  width: 100%;
+}
+
+.booking__checkbox input[type="checkbox"]:checked + .booking__control-mark::before {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 8px;
+  background-image: url("../img/svg/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+.booking__checkbox input[type="checkbox"]:hover + .booking__control-mark,
+.booking__checkbox input[type="checkbox"]:focus-visible + .booking__control-mark {
+  opacity: 0.8;
+  outline: 1px solid $color-lochmara;
+}

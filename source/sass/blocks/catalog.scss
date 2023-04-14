@@ -63,6 +63,8 @@
   color: $color-alice-blue;
   position: relative;
   cursor: pointer;
+  z-index: 0;
+  background-color: $color-tangaroa;
 
   @include vp-1023 {
     padding: 35px;
@@ -102,6 +104,7 @@
   opacity: 0;
   height: 100%;
   padding: 35px 25px;
+  // background-color: $color-tangaroa;
 
   @include vp-1023 {
     padding: 35px;
@@ -150,11 +153,11 @@
   margin-top: auto;
 }
 
-.catalog__item:hover,
-.catalog__item:focus-within,
-.catalog__item:active {
-  background-color: $color-tangaroa;
-}
+// .catalog__item:hover,
+// .catalog__item:focus-within,
+// .catalog__item:active {
+//   background-color: $color-tangaroa;
+// }
 
 .catalog__item:hover img {
   display: none;
@@ -163,6 +166,7 @@
 .catalog__item:hover .catalog__description,
 .catalog__item:focus-within .catalog__description,
 .catalog__item:active .catalog__description {
+  background-color: $color-tangaroa;
   opacity: 1;
 }
 
