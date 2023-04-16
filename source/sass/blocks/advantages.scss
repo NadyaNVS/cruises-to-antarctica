@@ -30,16 +30,16 @@
 }
 
 .advantages__container {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 120px;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 88px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 56px;
     padding-bottom: 65px;
   }
 }
@@ -50,8 +50,20 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
   text-align: center;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 51px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 31px;
+  }
 }
 
 .advantages__list {
@@ -76,29 +88,40 @@
   padding: 30px 30px 46px 30px;
   background-color: $color-alice-blue;
 
+  &--ticks {
+    padding: 30px 37px 46px 30px;
+  }
+
   @include vp-1023 {
-    padding: 26px 16px 25px 20px;
+    padding: 26px 16px 21px 20px;
   }
 
   @include vp-767 {
-    padding: 25px 15px 25px 20px;
+    padding: 25px 15px 21px 20px;
   }
 }
 
 .advantages__item svg {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+
+  @include vp-1023 {
+    height: 26px;
+    width: auto;
+  }
 }
 
 .advantages__item h3 {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 
   @include vp-1023 {
+    margin-bottom: 10px;
+    max-width: 170px;
     line-height: 25px;
   }
 }

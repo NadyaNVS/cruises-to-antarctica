@@ -6,9 +6,11 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 6px 23px;
-  min-width: 110px;
+  margin-top: 3px;
+  min-width: 112px;
 
   @include vp-1023 {
+    min-width: 91px;
     column-gap: 20px;
   }
 

@@ -1,4 +1,4 @@
-.intro {
+.promo {
   position: static;
   color: $color-alice-blue;
 
@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 650px;
+    height: 658px;
     top: 0;
     z-index: -1;
 
@@ -42,22 +42,22 @@
   }
 }
 
-.intro__container {
-  padding-top: 188px;
-  padding-bottom: 228px;
+.promo__container {
+  padding-top: 162px;
+  padding-bottom: 278px;
 
   @include vp-1023 {
-    padding-top: 200px;
+    padding-top: 183px;
     padding-bottom: 280px;
   }
 
   @include vp-767 {
-    padding-top: 102px;
-    padding-bottom: 246px;
+    padding-top: 115px;
+    padding-bottom: 179px;
   }
 }
 
-.intro h1 {
+.promo h1 {
   margin: 0;
   padding: 0;
   font-weight: 700;
@@ -65,7 +65,7 @@
   line-height: 66px;
   text-shadow: 0 4px 4px $color-shadow;
   margin-left: 95px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   @include vp-1023 {
     font-size: 50px;
@@ -77,11 +77,11 @@
   @include vp-767 {
     font-size: 36px;
     line-height: 45px;
-    margin-bottom: 25px;
+    margin-bottom: 11px;
   }
 }
 
-.intro p {
+.promo p {
   margin: 0;
   padding: 0;
   font-weight: 400;

@@ -48,8 +48,8 @@
       </div>
     </header>
     <main class="main" data-close-menu>
-      <section class="intro">
-        <div class="intro__container container">
+      <section class="promo">
+        <div class="promo__container container">
           <h1>Круизы в&nbsp;Антарктику</h1>
           <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
         </div>
@@ -87,7 +87,7 @@
                 <use href="img/sprite.svg#icon-ticks"></use>
               </svg>
               <h3>Система все включено</h3>
-              <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда
+              <p>Все наши круизы работают по&nbsp;системе "Все Включено". Великолепные блюда
                 и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
             </li>
 
@@ -108,10 +108,10 @@
           <ul class="catalog__list">
             <li class="catalog__item">
               <picture>
-                <source type="image/webp"
-                  srcset="img/content/cruise-astoria.webp 1x, img/content/cruise-astoria@2x.webp 2x">
+                <!-- <source type="image/webp"
+                  srcset="img/content/cruise-astoria.webp 1x, img/content/cruise-astoria@2x.webp 2x"> -->
                 <img src="img/content/cruise-astoria.jpg" srcset="img/content/cruise-astoria@2x.jpg 2x"
-                  alt="Пейзаж круиза “Астория”." width="309" height="386" loading="lazy">
+                  alt="Пейзаж круиза “Астория”." width="471" height="386" loading="lazy">
               </picture>
               <h3 class="catalog__item-name">Круиз “Астория”</h3>
               <div class="catalog__description">
@@ -281,9 +281,9 @@
                 <img src="img/content/cruise-minion-1.jpg" srcset="img/content/cruise-minion-1@2x.jpg 2x"
                   alt="Пейзаж круиза “Минион - 1”." width="309" height="386" loading="lazy">
               </picture>
-              <h3 class="catalog__item-name">Круиз " Минион - 1"</h3>
+              <h3 class="catalog__item-name">Круиз "Минион - 1"</h3>
               <div class="catalog__description">
-                <h3>Круиз " Минион - 1"</h3>
+                <h3>Круиз "Минион - 1"</h3>
                 <dl>
                   <dt>Маршрут</dt>
                   <dd>Аргентина - Антарктида</dd>
@@ -311,7 +311,7 @@
 
           <div class="booking__form" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
-              <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <fieldset>
 
                 <div class="custom-input" data-validate-type="text" data-limitation="name" data-required
@@ -338,7 +338,8 @@
                   <label class="booking__checkbox" for="agreement">
                     <input class="visually-hidden" type="checkbox" id="agreement" name="agreement" required checked>
                     <span class="booking__control-mark"></span>
-                    <span class="booking__control-name">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                    <span class="booking__control-name">Я&nbsp;согласен на&nbsp;обработку моих персональных
+                      данных</span>
                   </label>
                 </div>
                 <button class="booking__button btn" type="submit">Оставить заявку</button>
