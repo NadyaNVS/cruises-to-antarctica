@@ -1,58 +1,31 @@
 .promo {
-  position: static;
+  position: relative;
   color: $color-alice-blue;
+  background-color: $color-lochmara;
+  z-index: -2;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url("../img/intro-image.jpg");
-    background-color: $color-lochmara;
-    background-position: center 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 658px;
-    top: 0;
-    z-index: -1;
-
-    @media (min-width: $vp-1024) {
-      @include retina {
-        background-image: url("../img/intro-image@2x.jpg");
-      }
-    }
-
-    @include vp-1023 {
-      height: 638px;
-      background-image: url("../img/intro-image-tablet.jpg");
-
-      @include retina {
-        background-image: url("../img/intro-image-tablet@2x.jpg");
-      }
-    }
-
-    @include vp-767 {
-      height: 500px;
-      background-image: url("../img/intro-image-mobile.jpg");
-
-      @include retina {
-        background-image: url("../img/intro-image-mobile@2x.jpg");
-      }
-    }
-  }
+.promo img {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  object-position: bottom;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .promo__container {
-  padding-top: 162px;
-  padding-bottom: 278px;
+  padding-top: 270px;
+  padding-bottom: 286px;
 
   @include vp-1023 {
-    padding-top: 183px;
-    padding-bottom: 280px;
+    padding-top: 267px;
+    padding-bottom: 276px;
   }
 
   @include vp-767 {
-    padding-top: 115px;
+    padding-top: 176px;
     padding-bottom: 179px;
   }
 }

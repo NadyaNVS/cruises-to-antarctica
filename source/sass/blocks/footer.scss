@@ -16,7 +16,7 @@
 
 .footer a {
   font-weight: 500;
-  line-height: 19.5px;
+  line-height: 20px;
 
   @include vp-1023 {
     font-size: 12px;
@@ -31,7 +31,7 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 }
 

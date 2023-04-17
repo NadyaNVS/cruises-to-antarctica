@@ -689,6 +689,11 @@ button,
   outline: 1px solid #2871b2;
 }
 
+.header {
+  position: absolute;
+  width: 100%;
+}
+
 .header__container {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -696,7 +701,7 @@ button,
 
 .header a {
   font-weight: 500;
-  line-height: 19.5px;
+  line-height: 20px;
 }
 
 .header__navigation {
@@ -766,12 +771,16 @@ button,
   border-bottom: 1px solid #f9fbfd;
 }
 
+.is-open .navigation__toggle {
+  width: 12px;
+}
+
 .is-open .navigation__toggle::before,
 .is-open .navigation__toggle::after {
   z-index: 3;
   position: absolute;
   content: "";
-  width: 25px;
+  width: 19px;
   height: 2px;
   background-color: #011c40;
 }
@@ -800,28 +809,27 @@ button,
 }
 
 .promo {
-  position: static;
+  position: relative;
   color: #f9fbfd;
+  background-color: #2871b2;
+  z-index: -2;
 }
 
-.promo::before {
-  content: "";
-  display: block;
+.promo img {
   position: absolute;
-  background-image: url("../img/intro-image.jpg");
-  background-color: #2871b2;
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 658px;
   top: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: bottom;
+  object-position: bottom;
+  height: 100%;
+  width: 100%;
   z-index: -1;
 }
 
 .promo__container {
-  padding-top: 162px;
-  padding-bottom: 278px;
+  padding-top: 270px;
+  padding-bottom: 286px;
 }
 
 .promo h1 {
@@ -846,7 +854,7 @@ button,
 }
 
 .about__container {
-  padding-top: 120px;
+  padding-top: 112px;
   padding-bottom: 145px;
   display: -ms-grid;
   display: grid;
@@ -878,6 +886,10 @@ button,
   padding: 0;
   margin-top: -26px;
   padding-right: 40px;
+}
+
+.about img {
+  background-color: #e3ecf6;
 }
 
 .advantages {
@@ -918,10 +930,6 @@ button,
 .advantages__item {
   padding: 30px 30px 46px 30px;
   background-color: #f9fbfd;
-}
-
-.advantages__item--ticks {
-  padding: 30px 37px 46px 30px;
 }
 
 .advantages__item svg {
@@ -1396,7 +1404,7 @@ button,
 
 .footer a {
   font-weight: 500;
-  line-height: 19.5px;
+  line-height: 20px;
 }
 
 .footer__container {
@@ -1981,10 +1989,6 @@ button,
 */
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
-  .promo::before {
-    background-image: url("../img/intro-image@2x.jpg");
-  }
-
   .advantages {
     background-image: url("../img/advantages-background@2x.jpg");
   }
@@ -2018,14 +2022,9 @@ button,
     height: 20px;
   }
 
-  .promo::before {
-    height: 638px;
-    background-image: url("../img/intro-image-tablet.jpg");
-  }
-
   .promo__container {
-    padding-top: 183px;
-    padding-bottom: 280px;
+    padding-top: 267px;
+    padding-bottom: 276px;
   }
 
   .promo h1 {
@@ -2043,7 +2042,7 @@ button,
   }
 
   .about__container {
-    padding-top: 96px;
+    padding-top: 100px;
     padding-bottom: 94px;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
@@ -2081,7 +2080,7 @@ button,
   }
 
   .advantages__item {
-    padding: 26px 16px 21px 20px;
+    padding: 26px 16px 20px 20px;
   }
 
   .advantages__item svg {
@@ -2091,18 +2090,18 @@ button,
 
   .advantages__item h3 {
     margin-bottom: 10px;
-    max-width: 170px;
     line-height: 25px;
   }
 
   .catalog__container {
     padding-top: 89px;
-    padding-bottom: 101px;
+    padding-bottom: 100px;
   }
 
   .catalog h2 {
     font-size: 26px;
     line-height: 39px;
+    margin-bottom: 50px;
   }
 
   .catalog__list {
@@ -2174,6 +2173,7 @@ button,
   }
 
   .contacts__list li {
+    margin-bottom: 20px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -2211,10 +2211,6 @@ button,
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .promo::before {
-    background-image: url("../img/intro-image-tablet@2x.jpg");
-  }
-
   .advantages {
     background-image: url("../img/advantages-background-tablet@2x.jpg");
   }
@@ -2226,6 +2222,7 @@ button,
 
 @media (max-width: 1023px) and (max-width: 767px) {
   .booking__text-wrapper {
+    padding: 0 15px;
     margin-bottom: 35px;
   }
 }
@@ -2240,6 +2237,11 @@ button,
     padding-bottom: 20px;
   }
 
+  .header a {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   .navigation__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2248,6 +2250,7 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    gap: 5px;
   }
 
   .navigation__toggle {
@@ -2286,14 +2289,14 @@ button,
   }
 
   .navigation__header-list li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .is-open .navigation__header-list {
     display: block;
-    top: -20px;
-    left: 36px;
-    padding-top: 75px;
+    top: -21px;
+    left: 21px;
+    padding-top: 74px;
     padding-left: 15px;
     position: absolute;
     background-color: #f9fbfd;
@@ -2306,16 +2309,11 @@ button,
   .is-open .navigation__logo--mobile {
     z-index: 3;
     fill: #011c40;
-    margin-left: 60px;
-  }
-
-  .promo::before {
-    height: 500px;
-    background-image: url("../img/intro-image-mobile.jpg");
+    margin-left: 38px;
   }
 
   .promo__container {
-    padding-top: 115px;
+    padding-top: 176px;
     padding-bottom: 179px;
   }
 
@@ -2426,19 +2424,6 @@ button,
     padding: 34px 30px 40px 30px;
   }
 
-  .booking__form form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
   .booking__form h3 {
     display: block;
     text-align: center;
@@ -2449,23 +2434,14 @@ button,
     margin-bottom: 27px;
   }
 
-  .booking__checkbox {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 20px auto;
-    grid-template-columns: 20px auto;
-    -webkit-column-gap: 8px;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-  }
-
   .booking__control-mark {
     width: 20px;
     height: 20px;
-    margin-right: 0;
+    margin-right: 8px;
   }
 
   .booking__control-name {
+    max-width: 154px;
     line-height: 12px;
   }
 
@@ -2474,7 +2450,7 @@ button,
     grid-template-columns: 1fr;
     gap: 37px;
     padding-top: 57px;
-    padding-bottom: 64px;
+    padding-bottom: 66px;
   }
 
   .contacts__map {
@@ -2504,7 +2480,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .footer__navigation {
@@ -2519,6 +2495,8 @@ button,
   }
 
   .social {
+    margin-top: 0;
+    margin-left: -4px;
     -ms-flex-item-align: self-start;
     -ms-grid-row-align: self-start;
     align-self: self-start;
@@ -2539,10 +2517,6 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .promo::before {
-    background-image: url("../img/intro-image-mobile@2x.jpg");
-  }
-
   .advantages {
     background-image: url("../img/advantages-background-mobile@2x.jpg");
   }

@@ -56,6 +56,7 @@
     margin-bottom: 53px;
 
     @include vp-767 {
+      padding: 0 15px;
       margin-bottom: 35px;
     }
   }
@@ -119,13 +120,6 @@
   }
 }
 
-.booking__form form {
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 .booking__form h3 {
   margin: 0;
@@ -186,12 +180,6 @@
 .booking__checkbox {
   display: flex;
   cursor: pointer;
-
-  @include vp-767 {
-    display: grid;
-    grid-template-columns: 20px auto;
-    column-gap: 8px;
-  }
 }
 
 .booking__control-mark {
@@ -208,7 +196,7 @@
   @include vp-767 {
     width: 20px;
     height: 20px;
-    margin-right: 0;
+    margin-right: 8px;
   }
 }
 
@@ -218,6 +206,7 @@
   align-self: center;
 
   @include vp-767 {
+    max-width: 154px;
     line-height: 12px;
   }
 }

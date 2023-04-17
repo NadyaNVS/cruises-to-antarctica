@@ -13,6 +13,7 @@
   @include vp-767 {
     flex-direction: column;
     align-items: flex-start;
+    gap: 5px;
   }
 }
 
@@ -95,16 +96,16 @@
 
 .navigation__header-list li {
   @include vp-767 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 
 .is-open .navigation__header-list {
   @include vp-767 {
     display: block;
-    top: -20px;
-    left: 36px;
-    padding-top: 75px;
+    top: -21px;
+    left: 21px;
+    padding-top: 74px;
     padding-left: 15px;
     position: absolute;
     background-color: $color-alice-blue;
@@ -117,12 +118,14 @@
 
 
 .is-open .navigation__toggle {
+  width: 12px;
+
   &::before,
   &::after {
     z-index: 3;
     position: absolute;
     content: "";
-    width: 25px;
+    width: 19px;
     height: 2px;
     background-color: $color-tangaroa;
   }
@@ -141,7 +144,7 @@
   @include vp-767 {
     z-index: 3;
     fill: $color-tangaroa;
-    margin-left: 60px;
+    margin-left: 38px;
   }
 }
 
