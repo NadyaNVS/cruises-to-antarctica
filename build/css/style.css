@@ -590,8 +590,8 @@ button,
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
+  text-transform: lowercase;
+  font-weight: 400;
   /* stylelint-enable */
 }
 
@@ -629,9 +629,9 @@ button,
 
 .no-transition {
   /* stylelint-disable-next-line */
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -709,8 +709,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -744,6 +742,8 @@ button,
 
 .navigation__logo {
   display: block;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   width: 70px;
   height: 38px;
   fill: #f9fbfd;
@@ -975,6 +975,7 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   gap: 30px;
   padding: 0 15px;
 }
@@ -2387,7 +2388,6 @@ button,
   .catalog__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
     padding: 0 10px;
   }
 
