@@ -1048,7 +1048,11 @@ button,
 
 .catalog__description dl {
   margin: 0;
-  overflow: scroll;
+  overflow: hidden scroll;
+}
+
+.catalog__description dl::-webkit-scrollbar {
+  width: 0;
 }
 
 .catalog__description dd {
@@ -2023,6 +2027,11 @@ button,
     height: 20px;
   }
 
+  .promo img {
+    -o-object-position: center 70%;
+    object-position: center 70%;
+  }
+
   .promo__container {
     padding-top: 267px;
     padding-bottom: 276px;
@@ -2457,6 +2466,10 @@ button,
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+    height: 316px;
+  }
+
+  .contacts__wrapper {
     height: 316px;
   }
 
