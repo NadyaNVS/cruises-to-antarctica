@@ -5,39 +5,41 @@
   align-self: center;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 6px 23px;
+  gap: 6px 18px;
   margin-top: 3px;
   min-width: 112px;
 
   @include vp-1023 {
     min-width: 91px;
-    column-gap: 20px;
+    column-gap: 15px;
   }
 
   @include vp-767 {
-    margin-top: 0;
-    margin-left: -4px;
+    margin-top: -2px;
+    margin-left: -6px;
     align-self: self-start;
   }
 }
 
 .social svg {
-  width: 100%;
-  height: 100%;
+  @include vp-1023 {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .social a {
   fill: $color-alice-blue;
   display: flex;
   border-radius: 4px;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   align-items: center;
   justify-content: center;
 
   @include vp-1023 {
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 21px;
   }
 
   @include hover-focus {
