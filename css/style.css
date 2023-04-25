@@ -973,8 +973,8 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(206px, 471px))[4];
+  grid-template-columns: repeat(4, minmax(206px, 471px));
   grid-auto-rows: 1fr;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1064,10 +1064,6 @@ button,
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 12px;
-}
-
-.catalog__description dd:last-child {
-  margin-bottom: 0;
 }
 
 .catalog__description dt {
@@ -2113,8 +2109,8 @@ button,
   }
 
   .catalog__list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (minmax(309px, 471px))[2];
+    grid-template-columns: repeat(2, minmax(309px, 471px));
   }
 
   .catalog__item {
